@@ -55,4 +55,8 @@ Window.addEventListener('load', () => {
     } else {
         alert('Browser Yang Anda Gunakan Tidak Mendukung Web Storage');
     }
+
+    sessionUserAttemptsField.innerText = sessionStorage.getItem(sessionUserAttemptsKey);
+    localTotalVictoryField.innerText = localStorage.getItem(localTotalVictoryKey);
+    localMaximumAttemptField.innerText = localStorage.getItem(localMaximumAttemptsKey);
 });
