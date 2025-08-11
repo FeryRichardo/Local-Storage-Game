@@ -31,7 +31,7 @@ const sussionUserIsPlayingKey = 'SESSION_USER_IS_PLAYING';
 const localTotalVictoryKey = 'LOCAL_TOTAL_VICTORIES_PLAYED';
 const localMaximumAttemptsKey = 'LOCAL_MAXIMUM_ATTEMPTS';
 
-Window.addEventListener('load', () => {
+window.addEventListener('load', () => {
     if (typeof (Storage) !== 'undefined') {
         if (sessionStorage.getItem(sessionAnswerKey) === null) {
             sessionStorage.setItem(sessionAnswerKey, '');
@@ -41,12 +41,8 @@ Window.addEventListener('load', () => {
             sessionStorage.setItem(sessionUserAttemptsKey, 0);
         }
 
-        if (sessionStorage.getItem(sessionUserIsPlayingKey === null)) {
-            sessionStorage.setItem(sessionUserIsPlayingKey, false);
-        }
-
         if (localStorage.getItem(localTotalVictoryKey) === null) {
-            localStorage.setItem(lcalTotalVictoryKey, 0);
+            localStorage.setItem(localTotalVictoryKey, 0);
         }
 
         if (localStorage.getItem(localMaximumAttemptsKey) === null) {
