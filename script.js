@@ -67,21 +67,21 @@ playButton.addEventListener('click', () => {
 
 answerButton1.addEventListener('click', () => {
     sessionUserAnswerField.innerText += '1';
-    if (sessionUserAnswerField.innerText.length === 3) {
+    if (sessionUserAnswerField.innerText.length == 3) {
         checkAnswer(sessionUserAnswerField.innerText);
     }
 });
 
 answerButton2.addEventListener('click', () => {
     sessionUserAnswerField.innerText += '2';
-    if (sessionUserAnswerField.innerText.length === 3) {
+    if (sessionUserAnswerField.innerText.length == 3) {
         checkAnswer(sessionUserAnswerField.innerText);
     }
 });
 
 answerButton3.addEventListener('click', () => {
     sessionUserAnswerField.innerText += '3';
-    if (sessionUserAnswerField.innerText.length === 3) {
+    if (sessionUserAnswerField.innerText.length == 3) {
         checkAnswer(sessionUserAnswerField.innerText);
     }
 });
@@ -89,7 +89,7 @@ answerButton3.addEventListener('click', () => {
 function checkAnswer (userGuess) {
     const answer = sessionStorage.getItem(sessionAnswerKey);
 
-    if (userGuess === answer) {
+    if (userGuess == answer) {
         duringGameDisplay.setAttribute('hidden', true);
         afterGameDisplay.removeAttribute('hidden');
         sessionTrueAnswerField.innerText = answer;
@@ -98,7 +98,7 @@ function checkAnswer (userGuess) {
         const previousAttemptAmount = parseInt(sessionStorage.getItem(sessionUserAttemptsKey));
         sessionStorage.setItem(sessionUserAttemptsKey, previousAttemptAmount + 1);
         sessionUserAttemptsField.innerText = sessionStorage.getItem(sessionUserAttemptsKey); 
-        sessionUserAttemptsField.innerText = '';
+        sessionUserAnswerField.innerText = '';
         sessionUserWrongAnswerField.innerText = userGuess;
     }
 };
