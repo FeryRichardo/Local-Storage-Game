@@ -60,7 +60,7 @@ window.addEventListener('load', () => {
 
 playButton.addEventListener('click', () => {
     sessionStorage.setItem(sessionAnswerKey, getAnswer());
-    sessionAnswerKey.setItem(sessionUserIsPlayingKey, true);
+    sessionStorage.setItem(sessionUserIsPlayingKey, true);
     beforeGameDisplay.setAttribute('hidden', true);
     duringGameDisplay.removeAttribute('hidden');
 });
@@ -97,6 +97,7 @@ function checkAnswer (userGuess) {
     } else {
         const previousAttemptAmount = parseInt(sessionStorage.getItem(sessionUserAttemptsKey));
         sessionStorage.setItem(sessionUserAttemptsKey, previousAttemptAmount + 1);
+        sessionUserAttemptsField.innerText = sessionStorage.getItem(sessionUserAttemptsKey);
         sessionUserAttemptsField.innerText = '';
         sessionUserWrongAnswerField.innerText = userGuess;
     }
