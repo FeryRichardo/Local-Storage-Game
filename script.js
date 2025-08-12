@@ -5,9 +5,9 @@ const playButton = document.getElementById('play-button');
 const beforeGameDisplay = document.getElementById('before-game-display');
 const duringGameDisplay = document.getElementById('during-game-display');
 const afterGameDisplay = document.getElementById('after-game-display');
-const answeButton1 = document.getElementById('answer-1-button');
-const answeButton2 = document.getElementById('answer-2-button');
-const answeButton3 = document.getElementById('answer-3-button');
+const answerButton1 = document.getElementById('answer-1-button');
+const answerButton2 = document.getElementById('answer-2-button');
+const answerButton3 = document.getElementById('answer-3-button');
 const sessionUserAnswerField = document.getElementById('session-user-answer-field');
 const sessionUserWrongAnswerField = document.getElementById('session-user-wrong-answer-field');
 const sessionTrueAnswerField = document.getElementById('session-true-answer-field');
@@ -65,21 +65,21 @@ playButton.addEventListener('click', () => {
     duringGameDisplay.removeAttribute('hidden');
 });
 
-answeButton1.addEventListener('click', () => {
+answerButton1.addEventListener('click', () => {
     sessionUserAnswerField.innerText += '1';
     if (sessionUserAnswerField.innerText.length === 3) {
         checkAnswer(sessionUserAnswerField.innerText);
     }
 });
 
-answeButton2.addEventListener('click', () => {
+answerButton2.addEventListener('click', () => {
     sessionUserAnswerField.innerText += '2';
     if (sessionUserAnswerField.innerText.length === 3) {
         checkAnswer(sessionUserAnswerField.innerText);
     }
 });
 
-answeButton3.addEventListener('click', () => {
+answerButton3.addEventListener('click', () => {
     sessionUserAnswerField.innerText += '3';
     if (sessionUserAnswerField.innerText.length === 3) {
         checkAnswer(sessionUserAnswerField.innerText);
