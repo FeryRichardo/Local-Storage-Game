@@ -97,7 +97,7 @@ function checkAnswer (userGuess) {
     } else {
         const previousAttemptAmount = parseInt(sessionStorage.getItem(sessionUserAttemptsKey));
         sessionStorage.setItem(sessionUserAttemptsKey, previousAttemptAmount + 1);
-        sessionUserAttemptsField.innerText = sessionStorage.getItem(sessionUserAttemptsKey);
+        sessionUserAttemptsField.innerText = sessionStorage.getItem(sessionUserAttemptsKey); 
         sessionUserAttemptsField.innerText = '';
         sessionUserWrongAnswerField.innerText = userGuess;
     }
@@ -123,3 +123,5 @@ window.addEventListener('beforeunload', () => {
     sessionStorage.setItem(sessionUserAttemptsKey, 0);
     sessionUserAttemptsField.innerText = sessionStorage.getItem(sessionUserAttemptsKey);
 });
+
+
